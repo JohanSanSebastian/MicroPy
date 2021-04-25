@@ -13,7 +13,19 @@ root = Tk()
 root.title('MicroPy')
 root.geometry("800x500")
 
-startMeetAHK()
+option = input("Hello There......What would you like to choose \n 1. Google Meet 2. Microsoft Teams 3. Discord 4. Zoom")
+
+if option == 1:
+  startMeetAHK()
+elif option == 2:
+  startTeamsAHK()
+elif option == 3:
+  startDiscordAHK()
+elif option == 4:
+  startZoomAHK()
+else:
+  print("Sorry Invalid Option!")
+  
 
 # Keep track of the button state on/off
 is_on = False
