@@ -1,9 +1,10 @@
+# Importing necessary libraries
 import sounddevice as sd
 from numpy import linalg as LA
 import numpy as np
 import keyboard
 
-
+# Defining the function that listens to the dB value of your mic and executes unmute and mute respectively
 def microphone_control(indata, outdata, frames, time, status):
     volume_norm = np.linalg.norm(indata)*10
     print(int(volume_norm))
